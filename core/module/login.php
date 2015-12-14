@@ -1,9 +1,11 @@
 <?php
 	namespace trainMan\core\module;
+
 	use trainMan\core\config as config;
 	use trainMan\core\module\ldap as ldap;
 	use trainMan\core\module\user as user;
 	use trainMan\core\db\sql as sql;
+	use trainMan\core\system as system;
 
 	class login{
 
@@ -18,7 +20,7 @@
 		public function isUserAuthorized(){
 			//is anything empty?
 			if(empty($this->_username)||empty($this->_password)){return false;}
-			
+
 			//new LdapModule Object
 			$ldapModule = new ldap($this->_username, $this->_password);
 
@@ -29,29 +31,11 @@
 				$user = sql::getUser($this->_username);
 				if(!empty($user))
 				{
-					global $cSession;
-					$cSession->createSession(config::getConfiguration("SessionNameUser"), serialize(new user($user)));
+					system::getClassInstance("cUser")->create(new user($user));
 					return true;
 				}
-				else
-				{
-					return false;
-				}
 			}
-			else{
-				return false;
-			}
+			return false;
 		}
-
-		public static function isLoggedIn(){
-			global $cSession;
-			return $cSession->existsSession(config::getConfiguration("SessionNameUser"));
-		}
-
-		public static function logout(){
-			global $cSession;
-			$cSession->destroySession(config::getConfiguration("SessionNameUser"));
-		}
-
 	}
 ?>

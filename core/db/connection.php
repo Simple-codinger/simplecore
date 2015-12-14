@@ -8,17 +8,22 @@
 		private $_driver;
 		private $_isConnected = false;
 		private $_conn;
-
-		public function __construct(array $params, Driver $driver)
-		{
-			$this->_driver = $driver;
-			$this->_params = $params;
-
-			$this->_connect();
+		private static $_instance = null;
+		
+		//Singleton
+		public static function getInstance(){
+			if(!self::$_instance){
+				self::$_instance = new self();
+			}
+			
+			return self::$_instance;
 		}
 
-		private function _connect()
-		{
+		public function __construct(){
+			//Nothing to do here
+		}
+
+		private function _connect(){
 			if($this->_isConnected){
 				return false;
 			}
@@ -32,8 +37,15 @@
 
 			return true;
 		}
+		
+		public function connect(array $params, Driver $driver){
+			$this->_driver = $driver;
+			$this->_params = $params;
+			
+			$this->_connect();
+		}
 
-	    public function &getConnection(){
+	    public function getConnection(){
 	    	if($this->_isConnected)
 	    	{
 	    		return $this->_conn;

@@ -15,5 +15,17 @@
 		public function getUsername(){
 			return $this->_user['username'];
 		}
+
+		public function getFirstname(){
+			return $this->_user['firstname'];
+		}
+
+		public function getLastname(){
+			return $this->_user['lastname'];
+		}
+
+		public function getPersonalnumber(){
+			return $this->_user['personalnumber'];
+		}
 	}
 ?>
