@@ -1,9 +1,9 @@
 <?php
-	namespace trainMan\core\module;
+	namespace simplecore\core\module;
 
-	use trainMan\core\module\user as user;
-	use trainMan\core\config as config;
-	use trainMan\core\system as system;
+	use simplecore\core\module\user as user;
+	use simplecore\core\config as config;
+	use simplecore\core\system as system;
 
 	class currentUser{
 

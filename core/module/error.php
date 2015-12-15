@@ -1,5 +1,5 @@
 <?php
-	namespace trainMan\core\module;
+	namespace simplecore\core\module;
 	class error{
 		private $mErrorArray = array("siteNotFound" => "Fehler. Die Seite wurde nicht gefunden.");
 		private $mErrorText;

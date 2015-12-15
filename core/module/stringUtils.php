@@ -1,6 +1,6 @@
 <?php
-	namespace trainMan\core\module;
-	
+	namespace simplecore\core\module;
+
 	class stringUtils{
 		public static function substr($key, $from, $to, $ext="..."){
 			$maxLength = $to - $from;
@@ -10,8 +10,8 @@
 			} else
 				return $key;
 		}
-		
-		
+
+
 		public static function getHexCodeFromColor($color){
 			try{
 				return ltrim($color, '#');
@@ -21,4 +21,3 @@
 		}
 	}
 ?>
-

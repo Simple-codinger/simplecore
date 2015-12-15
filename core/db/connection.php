@@ -1,7 +1,7 @@
 <?php
-	namespace trainMan\core\db;
-	use trainMan\core\db\driver\iDriver as Driver;
-	
+	namespace simplecore\core\db;
+	use simplecore\core\db\driver\iDriver as Driver;
+
 	class connection
 	{
 		private $_params = array();
@@ -9,13 +9,13 @@
 		private $_isConnected = false;
 		private $_conn;
 		private static $_instance = null;
-		
+
 		//Singleton
 		public static function getInstance(){
 			if(!self::$_instance){
 				self::$_instance = new self();
 			}
-			
+
 			return self::$_instance;
 		}
 
@@ -37,11 +37,11 @@
 
 			return true;
 		}
-		
+
 		public function connect(array $params, Driver $driver){
 			$this->_driver = $driver;
 			$this->_params = $params;
-			
+
 			$this->_connect();
 		}
 

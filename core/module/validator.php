@@ -1,5 +1,5 @@
 <?php
-	namespace trainMan\core\module;
+	namespace simplecore\core\module;
 
 	class validator{
 		public static function checkHexCode($hex){

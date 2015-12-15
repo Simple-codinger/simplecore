@@ -1,7 +1,7 @@
 <?php
-	namespace trainMan\core\db\driver\mysqli;
-	use trainMan\core\db\driver\iDriver as iDriver;
-	use trainMan\core\db\PDOConnection as PDOConnection;
+	namespace simplecore\core\db\driver\mysqli;
+	use simplecore\core\db\driver\iDriver as iDriver;
+	use simplecore\core\db\PDOConnection as PDOConnection;
 	class driver implements iDriver
 	{
 		public function connect(array $params, $username = null, $password = null, array $driverOptions = array())

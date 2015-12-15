@@ -1,8 +1,8 @@
 <?php
-  namespace trainMan\core\module\repository;
+  namespace simplecore\core\module\repository;
 
-  use trainMan\core\module\user as user;
-  use trainMan\core\db\sql as sql;
+  use simplecore\core\module\user as user;
+  use simplecore\core\db\sql as sql;
 
   class userRepository{
 

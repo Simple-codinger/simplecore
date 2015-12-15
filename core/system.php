@@ -1,7 +1,7 @@
 <?php
 /*Author Gierisch Vincent, PersNr.: 4974, Tel.: 2350
 Thanks to Domink Ganic for supporting me*/
-	namespace trainMan\core;
+	namespace simplecore\core;
 
 	class system{
 		private static $arrObjects = array();
@@ -14,13 +14,13 @@ Thanks to Domink Ganic for supporting me*/
 		private function _defineClasses(){
 			//no globals
 			//work with singleton and import function
-			self::import("trainMan\\core\\session", "session");
+			self::import("simplecore\\core\\session", "session");
 
 			//get current user
-			self::import("trainMan\\core\\module\\currentUser", "cUser");
+			self::import("simplecore\\core\\module\\currentUser", "cUser");
 
-			self::import("trainMan\\core\\db\\connection", "database");
-			self::getClassInstance("database")->connect(\trainMan\core\config::getConfiguration("databaseConfig"), new \trainMan\core\db\driver\mysqli\driver());
+			self::import("simplecore\\core\\db\\connection", "database");
+			self::getClassInstance("database")->connect(\simplecore\core\config::getConfiguration("databaseConfig"), new \simplecore\core\db\driver\mysqli\driver());
 		}
 
 		private function _coreLoader($className){
@@ -59,7 +59,7 @@ Thanks to Domink Ganic for supporting me*/
 		//source this shit out of here
 
 		public function getUser(){
-			return unserialize($_SESSION[\trainMan\core\config::getConfiguration("SessionNameUser")]);
+			return unserialize($_SESSION[\simplecore\core\config::getConfiguration("SessionNameUser")]);
 		}
 
 	} (new system());

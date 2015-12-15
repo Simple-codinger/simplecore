@@ -1,11 +1,11 @@
 <?php
-	namespace trainMan\core\module;
+	namespace simplecore\core\module;
 
-	use trainMan\core\config as config;
-	use trainMan\core\module\ldap as ldap;
-	use trainMan\core\module\user as user;
-	use trainMan\core\db\sql as sql;
-	use trainMan\core\system as system;
+	use simplecore\core\config as config;
+	use simplecore\core\module\ldap as ldap;
+	use simplecore\core\module\user as user;
+	use simplecore\core\db\sql as sql;
+	use simplecore\core\system as system;
 
 	class login{
 

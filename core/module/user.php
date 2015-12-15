@@ -1,5 +1,5 @@
 <?php
-	namespace trainMan\core\module;
+	namespace simplecore\core\module;
 	class user{
 
 		private $_user;

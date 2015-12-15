@@ -1,5 +1,5 @@
 <?php
-	namespace trainMan\core;
+	namespace simplecore\core;
 	class session{
 
 		private static $_instance = null;

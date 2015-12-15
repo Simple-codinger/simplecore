@@ -1,5 +1,5 @@
 <?php
-	namespace trainMan\core\db;
+	namespace simplecore\core\db;
 	use PDO;
 	class PDOConnection extends PDO
 	{
