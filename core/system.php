@@ -1,5 +1,5 @@
 <?php
-/*Author Gierisch Vincent, PersNr.: 4974, Tel.: 2350
+/*Author Gierisch Vincent
 Thanks to Domink Ganic for supporting me*/
 	namespace simplecore\core;
 

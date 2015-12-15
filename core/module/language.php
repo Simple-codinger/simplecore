@@ -1,5 +1,5 @@
 <?php
-	/*Author Gierisch Vincent, PersNr.: 4974, Tel.: 2350*/
+	/*Author Gierisch Vincent/
 	/* http://www.uebersetzungen.in/sprachkuerzel-nach-iso_639-1/ */
 	namespace simplecore\core\module;
 
