@@ -7,10 +7,10 @@
 			"SessionNameUser" => "simplecoreUser",
 			"notAuthorizedPage" => "login.php",
 			"databaseConfig" => array(
-										'dbname' => '',
-										'user' => '',
+										'dbname' => 'simplecore',
+										'user' => 'root',
 										'password' => '',
-										'host' => '')
+										'host' => '127.0.0.1')
 			);
 
 		public static function getConfiguration($key){
