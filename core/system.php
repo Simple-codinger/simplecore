@@ -55,12 +55,5 @@ Thanks to Domink Ganic for supporting me*/
 			}
 			return null;
 		}
-
-		//source this shit out of here
-
-		public function getUser(){
-			return unserialize($_SESSION[\simplecore\core\config::getConfiguration("SessionNameUser")]);
-		}
-
 	} (new system());
 ?>
