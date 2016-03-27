@@ -55,5 +55,6 @@ Thanks to Domink Ganic for supporting me*/
 			}
 			return null;
 		}
+
 	} (new system());
 ?>
