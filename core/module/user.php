@@ -1,16 +1,12 @@
 <?php
 	namespace simplecore\core\module;
-	use simplecore\core\orm\DataObject as DataObject;
-	class user extends DataObject{
+	class user{
 
 		private $id;
 		private $username;
 		private $password;
 		private $firstname;
 		private $lastname;
-		//just for saving into db
-		public static $tableName = "user";
-		public static $fields = array('id', 'username', 'password', 'firstname', 'lastname');
 
 		public function __construct(){
 
