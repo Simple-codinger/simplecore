@@ -21,7 +21,7 @@
 			if(!is_null($user))
 			{
 				if(crypt($this->_credentials["password"], $user->getPassword()) == $user->getPassword()){
-					system::getClassInstance("cUser")->create(new user($user));
+					system::getClassInstance("cUser")->create($user);
 					return true;
 				}
 			}
