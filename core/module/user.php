@@ -1,16 +1,12 @@
 <?php
 	namespace simplecore\core\module;
-	use simplecore\core\orm\DataObject as DataObject;
-	class user extends DataObject{
+	class user{
 
 		private $id;
 		private $username;
+		private $password;
 		private $firstname;
 		private $lastname;
-		private $personalnumber;
-		//just for saving into db
-		public static $tableName = "user";
-		public static $fields = array('id', 'username', 'firstname', 'lastname', 'personalnumber');
 
 		public function __construct(){
 
@@ -32,6 +28,14 @@
 			$this->username = $username;
 		}
 
+		public function getPassword(){
+			return $this->password;
+		}
+
+		public function setPassword($password){
+			$this->password = $password;
+		}
+
 		public function getFirstname(){
 			return $this->firstname;
 		}
@@ -46,14 +50,6 @@
 
 		public function setLastname($lastname){
 			$this->lastname = $lastname;
-		}
-
-		public function getPersonalnumber(){
-			return $this->personalnumber;
-		}
-
-		public function setPersonalnumber($personalnumber){
-			$this->personalnumber = $personalnumber;
 		}
 	}
 ?>

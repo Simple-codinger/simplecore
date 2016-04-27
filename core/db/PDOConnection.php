@@ -11,5 +11,17 @@
 				throw new PDOException($e);
 			}
 		}
+
+		public function select($sql, $values = array(), $fetchMode = PDO::FETCH_ASSOC){
+			$query = $this->prepare($sql);
+			foreach($values as $key => $value){
+				$query->bindValue($key, $value);
+			}
+			if(!$query->execute()){
+				throw new Exception("Failure: Database", 1);
+				return;
+			}
+			return $query->fetchAll($fetchMode);
+		}
 	}
 ?>
