@@ -1,5 +1,5 @@
 <?php
-  namespace simplecore\core\module\repository;
+  namespace simplecore\core\repository;
 
   use simplecore\core\module\user as user;
 
