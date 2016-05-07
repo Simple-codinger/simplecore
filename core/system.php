@@ -14,11 +14,8 @@ Thanks to Domink Ganic for supporting me*/
 		private function _defineClasses(){
 			//no globals
 			//work with singleton and import function
+			
 			self::import("simplecore\\core\\session", "session");
-
-			//get current user
-			self::import("simplecore\\core\\module\\currentUser", "cUser");
-
 			self::import("simplecore\\core\\db\\connection", "database");
 			self::getClassInstance("database")->connect(\simplecore\core\config::getConfiguration("databaseConfig"), new \simplecore\core\db\driver\mysqli\driver());
 		}
@@ -35,13 +32,13 @@ Thanks to Domink Ganic for supporting me*/
 		}
 
 		/**
-		 * Import a library and make it accessible by its name or an optional key
+		 * Import a service and make it accessible by its name or an optional key
 		 *
 		 * @param string  $strClass The class name
 		 * @param string  $strKey   An optional key to store the object under
 		 * @param boolean $blnForce If true, existing objects will be overridden
 		*/
-		public static function import($strClass, $strKey=null, $blnForce=false){
+		public static function importService($strClass, $strKey=null, $blnForce=false){
 			$strKey = !is_null($strKey) ? $strKey : $strClass;
 			if($blnForce || !isset(self::$arrObjects[$strKey])){
 				//ceck if singleton pattern is used
@@ -49,7 +46,13 @@ Thanks to Domink Ganic for supporting me*/
 			}
 		}
 
-		public static function getClassInstance($strKey){
+		/**
+		*Get an imported service by its name
+		*
+		*@param string  $strKey The name
+		*
+		*/
+		public static function getServiceClassInstance($strKey){
 			if(isset(self::$arrObjects[$strKey])){
 				return self::$arrObjects[$strKey];
 			}
