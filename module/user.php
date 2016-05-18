@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\core\module;
+	namespace simplecore\module;
 	class user{
 
 		private $id;

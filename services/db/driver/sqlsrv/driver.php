@@ -1,5 +1,7 @@
 <?php
-	namespace simplecore\core\db\driver\sqlsrv;
+	namespace simplecore\services\db\driver\sqlsrv;
+	use  simplecore\services\db\driver\iDriver as iDriver;
+
 	class driver implements iDriver
 	{
 		public function connect(array $params, $username = null, $password = null, array $driverOptions = array())

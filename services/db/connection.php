@@ -1,6 +1,6 @@
 <?php
-	namespace simplecore\core\db;
-	use simplecore\core\db\driver\iDriver as Driver;
+	namespace simplecore\services\db;
+	use simplecore\services\db\driver\iDriver as Driver;
 
 	class connection
 	{

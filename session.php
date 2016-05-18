@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\core;
+	namespace simplecore;
 	class session{
 
 		private static $_instance = null;
