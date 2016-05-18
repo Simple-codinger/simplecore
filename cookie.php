@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\core;
+	namespace simplecore;
 	class cookie{
 
 		public static function existsCookie($mKey) {

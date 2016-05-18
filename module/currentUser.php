@@ -1,9 +1,9 @@
 <?php
-	namespace simplecore\core\module;
+	namespace simplecore\module;
 
-	use simplecore\core\module\user as user;
-	use simplecore\core\config as config;
-	use simplecore\core\system as system;
+	use simplecore\module\user as user;
+	use simplecore\config as config;
+	use simplecore\system as system;
 
 	class currentUser{
 

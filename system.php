@@ -1,7 +1,7 @@
 <?php
 /*Author Gierisch Vincent
 Thanks to Domink Ganic for supporting me*/
-	namespace simplecore\core;
+	namespace simplecore;
 
 	class system{
 		private static $arrObjects = array();
@@ -14,10 +14,10 @@ Thanks to Domink Ganic for supporting me*/
 		private function _defineClasses(){
 			//no globals
 			//work with singleton and import function
-			
-			self::import("simplecore\\core\\session", "session");
-			self::import("simplecore\\core\\db\\connection", "database");
-			self::getClassInstance("database")->connect(\simplecore\core\config::getConfiguration("databaseConfig"), new \simplecore\core\db\driver\mysqli\driver());
+
+			self::import("simplecore\\session", "session");
+			self::import("simplecore\\db\\connection", "database");
+			self::getClassInstance("database")->connect(\simplecore\config::getConfiguration("databaseConfig"), new \simplecore\db\driver\mysqli\driver());
 		}
 
 		private function _coreLoader($className){

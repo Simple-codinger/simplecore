@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\core;
+	namespace simplecore;
 	class config{
 		private static $_config = array(
 			"ldapServerPrefix" => "server\\",

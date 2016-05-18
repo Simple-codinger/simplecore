@@ -1,8 +1,8 @@
 <?php
 /*Author Gierisch Vincent
 Thanks to Domink Ganic for supporting me*/
-	namespace simplecore\core\module;
-	use simplecore\core\config as config;
+	namespace simplecore\module;
+	use simplecore\config as config;
 	class ldap{
 
 		private $_credentials = array("username" => null, "password" => null);
