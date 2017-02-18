@@ -1,6 +1,6 @@
 <?php
-	namespace simplecore\services\db\driver\sqlsrv;
-	use  simplecore\services\db\driver\iDriver as iDriver;
+	namespace simpleinventory\simplecore\services\db\driver\sqlsrv;
+	use  simpleinventory\simplecore\services\db\driver\iDriver as iDriver;
 
 	class driver implements iDriver
 	{

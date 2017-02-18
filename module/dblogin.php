@@ -1,10 +1,11 @@
 <?php
-	namespace simplecore\module;
+	namespace simpleinventory\simplecore\module;
 
-	use simplecore\module\user as user;
-	use simplecore\system as system;
+	use simpleinventory\simplecore\module\user as user;
+	use simpleinventory\simplecore\system as system;
+	use simpleinventory\simplecore\repository\userRepository as repo;
 
-	class login{
+	class dblogin{
 
 		private $_credentials = array("username" => null, "password" => null);
 
@@ -21,7 +22,7 @@
 			if(!is_null($user))
 			{
 				if(crypt($this->_credentials["password"], $user->getPassword()) == $user->getPassword()){
-					system::getClassInstance("cUser")->create($user);
+					system::getServiceClassInstance("cUser")->create($user);
 					return true;
 				}
 			}

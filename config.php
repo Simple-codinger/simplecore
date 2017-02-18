@@ -1,13 +1,13 @@
 <?php
-	namespace simplecore;
+	namespace simpleinventory\simplecore;
 	class config{
 		private static $_config = array(
 			"ldapServerPrefix" => "server\\",
 			"ldapServer" => "",
-			"SessionNameUser" => "simplecoreUser",
+			"SessionNameUser" => "simpleInventoryUser",
 			"notAuthorizedPage" => "login.php",
 			"databaseConfig" => array(
-										'dbname' => 'simplecore',
+										'dbname' => 'simple_inventory',
 										'user' => 'root',
 										'password' => '',
 										'host' => '127.0.0.1')

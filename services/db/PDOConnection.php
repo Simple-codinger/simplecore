@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\services\db;
+	namespace simpleinventory\simplecore\services\db;
 	use PDO;
 	class PDOConnection extends PDO
 	{

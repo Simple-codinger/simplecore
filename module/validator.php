@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\module;
+	namespace simpleinventory\simplecore\module;
 
 	class validator{
 		public static function checkHexCode($hex){

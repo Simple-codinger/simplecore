@@ -1,9 +1,9 @@
 <?php
-	namespace simplecore\module;
+	namespace simpleinventory\simplecore\module;
 
-	use simplecore\module\user as user;
-	use simplecore\config as config;
-	use simplecore\system as system;
+	use simpleinventory\simplecore\module\user as user;
+	use simpleinventory\simplecore\config as config;
+	use simpleinventory\simplecore\system as system;
 
 	class currentUser{
 
@@ -22,7 +22,7 @@
 		}
 
 		public function __construct(){
-			$this->_session = system::getClassInstance("session");
+			$this->_session = system::getServiceClassInstance("session");
 			$this->_key = config::getConfiguration("SessionNameUser");
 
 			if($this->_session->existsSession($this->_key)){

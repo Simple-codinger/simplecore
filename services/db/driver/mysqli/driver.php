@@ -1,7 +1,7 @@
 <?php
-	namespace simplecore\services\db\driver\mysqli;
-	use simplecore\services\db\driver\iDriver as iDriver;
-	use simplecore\services\db\PDOConnection as PDOConnection;
+	namespace simpleinventory\simplecore\services\db\driver\mysqli;
+	use simpleinventory\simplecore\services\db\driver\iDriver as iDriver;
+	use simpleinventory\simplecore\services\db\PDOConnection as PDOConnection;
 	class driver implements iDriver
 	{
 		public function connect(array $params, $username = null, $password = null, array $driverOptions = array())

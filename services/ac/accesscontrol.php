@@ -1,5 +1,5 @@
 <?php
-    namespace simplecore\services\ac;
+    namespace simpleinventory\simplecore\services\ac;
 
     class accesscontrol{
 

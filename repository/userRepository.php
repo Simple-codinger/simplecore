@@ -1,12 +1,12 @@
 <?php
-  namespace simplecore\repository;
+  namespace simpleinventory\simplecore\repository;
 
-  use simplecore\module\user as user;
+  use simpleinventory\simplecore\module\user as user;
 
   class userRepository{
 
     public static function getUserByUsername($username){
-      $userArray = \simplecore\system::getClassInstance("database")->getConnection()->select("SELECT * FROM user WHERE username = :username;", array(':username' => $username));
+      $userArray = \simpleinventory\simplecore\system::getServiceClassInstance("database")->getConnection()->select("SELECT * FROM user WHERE username = :username;", array(':username' => $username));
       $user = null;
       if(!empty($userArray)){
         $userArray = $userArray[0];

@@ -1,5 +1,5 @@
 <?php
-	namespace simplecore\module;
+	namespace simpleinventory\simplecore\module;
 
 	class stringUtils{
 		public static function substr($key, $from, $to, $ext="..."){

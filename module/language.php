@@ -1,7 +1,7 @@
 <?php
 	/*Author Gierisch Vincent/
 	/* http://www.uebersetzungen.in/sprachkuerzel-nach-iso_639-1/ */
-	namespace simplecore\module;
+	namespace simpleinventory\simplecore\module;
 
 	class language{
 		public $xmlFile;
